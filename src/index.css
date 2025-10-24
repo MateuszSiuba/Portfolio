@@ -1,0 +1,418 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  
+  /* Default theme variables */
+  --color-primary: #10b981;
+  --color-secondary: #1e40af;
+  --color-accent: #8b5cf6;
+  --color-background: #ffffff;
+  --color-text: #111827;
+}
+
+/* Light theme */
+html.light {
+  --color-primary: #10b981;
+  --color-secondary: #1e40af;
+  --color-accent: #8b5cf6;
+  --color-background: #ffffff;
+  --color-text: #111827;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --border-color: #e5e7eb;
+}
+
+/* Dark theme */
+html.dark {
+  --color-primary: #10b981;
+  --color-secondary: #1e40af;
+  --color-accent: #8b5cf6;
+  --color-background: #111827;
+  --color-text: #f9fafb;
+  --bg-primary: #111827;
+  --bg-secondary: #1f2937;
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --border-color: #374151;
+}
+
+/* Matrix theme */
+html.matrix {
+  --color-primary: #00ff41;
+  --color-secondary: #008f11;
+  --color-accent: #00ff41;
+  --color-background: #0d0208;
+  --color-text: #00ff41;
+  --bg-primary: #0d0208;
+  --bg-secondary: #1a0f1a;
+  --text-primary: #00ff41;
+  --text-secondary: #00cc33;
+  --border-color: #008f11;
+}
+
+/* Ocean theme */
+html.ocean {
+  --color-primary: #06b6d4;
+  --color-secondary: #0284c7;
+  --color-accent: #0ea5e9;
+  --color-background: #0c4a6e;
+  --color-text: #f0f9ff;
+  --bg-primary: #0c4a6e;
+  --bg-secondary: #075985;
+  --text-primary: #f0f9ff;
+  --text-secondary: #bae6fd;
+  --border-color: #0284c7;
+}
+
+/* Pure White theme */
+html.pure {
+  --color-primary: #10b981;
+  --color-secondary: #1e40af;
+  --color-accent: #8b5cf6;
+  --color-background: #ffffff;
+  --color-text: #111827;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --border-color: #e5e7eb;
+}
+
+/* Apply theme colors globally - but only for custom themes */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Matrix Theme specific overrides */
+html.matrix {
+  color-scheme: dark;
+}
+
+html.matrix .bg-white {
+  background-color: #0d0208 !important;
+}
+
+html.matrix .bg-gray-50 {
+  background-color: #1a0f1a !important;
+}
+
+html.matrix .bg-gray-900,
+html.matrix .bg-gray-800 {
+  background-color: #0d0208 !important;
+}
+
+html.matrix .text-gray-900,
+html.matrix .text-gray-800,
+html.matrix .text-gray-700,
+html.matrix .text-gray-600 {
+  color: #00ff41 !important;
+}
+
+html.matrix .text-gray-300 {
+  color: #00ff41 !important;
+}
+
+html.matrix .border-gray-200,
+html.matrix .border-gray-300,
+html.matrix .border-gray-700 {
+  border-color: #008f11 !important;
+}
+
+/* Ocean Theme specific overrides */
+html.ocean {
+  color-scheme: dark;
+}
+
+html.ocean .bg-white {
+  background-color: #0c4a6e !important;
+}
+
+html.ocean .bg-gray-50 {
+  background-color: #075985 !important;
+}
+
+html.ocean .bg-gray-900,
+html.ocean .bg-gray-800 {
+  background-color: #0c4a6e !important;
+}
+
+html.ocean .text-gray-900,
+html.ocean .text-gray-800,
+html.ocean .text-gray-700,
+html.ocean .text-gray-600 {
+  color: #f0f9ff !important;
+}
+
+html.ocean .text-gray-300 {
+  color: #bae6fd !important;
+}
+
+html.ocean .border-gray-200,
+html.ocean .border-gray-300,
+html.ocean .border-gray-700 {
+  border-color: #0284c7 !important;
+}
+
+/* Pure Theme specific overrides - ALL WHITE */
+html.pure {
+  color-scheme: light;
+}
+
+html.pure .bg-white,
+html.pure .bg-gray-50,
+html.pure .bg-gray-100 {
+  background-color: #ffffff !important;
+}
+
+html.pure .bg-gray-900,
+html.pure .bg-gray-800,
+html.pure .bg-gray-700 {
+  background-color: #ffffff !important;
+}
+
+html.pure .text-white,
+html.pure .text-gray-100,
+html.pure .text-gray-200 {
+  color: #111827 !important;
+}
+
+html.pure .text-gray-900,
+html.pure .text-gray-800,
+html.pure .text-gray-700,
+html.pure .text-gray-600 {
+  color: #111827 !important;
+}
+
+html.pure .text-gray-400,
+html.pure .text-gray-500,
+html.pure .text-gray-300 {
+  color: #6b7280 !important;
+}
+
+html.pure .border-gray-200,
+html.pure .border-gray-300,
+html.pure .border-gray-700,
+html.pure .border-gray-800 {
+  border-color: #e5e7eb !important;
+}
+
+/* Remove ALL colors in Pure theme - make everything white/gray */
+html.pure .bg-primary-50,
+html.pure .bg-primary-100,
+html.pure .bg-primary-200,
+html.pure .bg-primary-500,
+html.pure .bg-primary-600 {
+  background-color: #ffffff !important;
+}
+
+html.pure .bg-navy-900,
+html.pure .bg-navy-600,
+html.pure .bg-navy-500 {
+  background-color: #ffffff !important;
+}
+
+html.pure .bg-green-500,
+html.pure .bg-blue-500,
+html.pure .bg-purple-500 {
+  background-color: #ffffff !important;
+}
+
+html.pure .text-primary-500,
+html.pure .text-primary-600,
+html.pure .text-primary-400 {
+  color: #111827 !important;
+}
+
+html.pure .text-green-500,
+html.pure .text-blue-500,
+html.pure .text-cyan-500 {
+  color: #111827 !important;
+}
+
+/* Remove gradients in Pure theme */
+html.pure .bg-gradient-to-br,
+html.pure .bg-gradient-to-r,
+html.pure .bg-gradient-to-l {
+  background: #ffffff !important;
+}
+
+html.pure .from-primary-500,
+html.pure .to-navy-600,
+html.pure .via-gray-50 {
+  --tw-gradient-from: #ffffff !important;
+  --tw-gradient-to: #ffffff !important;
+  --tw-gradient-via: #ffffff !important;
+}
+
+html.pure .border-primary-200,
+html.pure .border-primary-400,
+html.pure .border-primary-500,
+html.pure .border-primary-700,
+html.pure .border-navy-200,
+html.pure .border-navy-400,
+html.pure .border-green-200,
+html.pure .border-green-400 {
+  border-color: #e5e7eb !important;
+}
+
+/* Fix text-gradient and specific elements in Pure theme */
+html.pure .text-gradient {
+  background: none !important;
+  color: #111827 !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
+  background-clip: unset !important;
+}
+
+html.pure .text-cyan-500,
+html.pure .text-cyan-400 {
+  color: #111827 !important;
+}
+
+/* Remove colored hovers in Pure */
+html.pure .hover\:bg-primary-500:hover,
+html.pure .hover\:bg-primary-600:hover,
+html.pure .hover\:bg-green-500:hover {
+  background-color: #f3f4f6 !important;
+}
+
+html.pure .hover\:text-primary-500:hover,
+html.pure .hover\:text-primary-400:hover,
+html.pure .hover\:text-primary-600:hover {
+  color: #111827 !important;
+}
+
+html.pure .hover\:border-primary-400:hover,
+html.pure .hover\:border-primary-500:hover,
+html.pure .hover\:border-green-400:hover,
+html.pure .hover\:border-navy-400:hover {
+  border-color: #9ca3af !important;
+}
+
+/* Fix CV button border in Pure */
+html.pure .border-primary-600,
+html.pure .border-primary-500 {
+  border-color: #9ca3af !important;
+}
+
+/* SVG icons colors in Pure */
+html.pure svg {
+  color: #6b7280 !important;
+}
+
+html.pure .text-green-500 svg,
+html.pure .text-blue-500 svg,
+html.pure .text-purple-500 svg {
+  color: #6b7280 !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Accessibility improvements */
+*:focus-visible {
+  outline: 3px solid #10b981;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #10b981;
+  outline-offset: 2px;
+}
+
+/* Skip to main content link */
+.skip-to-main {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1rem;
+  background-color: #10b981;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.skip-to-main:focus {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 1rem;
+}
+
+/* Reduced motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-500 via-navy-500 to-primary-600 bg-clip-text text-transparent;
+  }
+  
+  /* Theme-aware backgrounds */
+  .bg-theme {
+    background-color: var(--color-background);
+  }
+  
+  .bg-theme-secondary {
+    background-color: var(--bg-secondary);
+  }
+  
+  .text-theme {
+    color: var(--color-text);
+  }
+  
+  .text-theme-secondary {
+    color: var(--text-secondary);
+  }
+  
+  .border-theme {
+    border-color: var(--border-color);
+  }
+  
+  .bg-gradient-theme {
+    background: linear-gradient(to bottom right, var(--color-background), var(--bg-secondary));
+  }
+  
+  .bg-gradient-theme-accent {
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+  }
+}
