@@ -51,7 +51,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-rose-50 via-pink-50 to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+    <section id="contact" className="py-20 bg-gradient-to-br from-rose-50 via-pink-50 to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 animate-gradient">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
@@ -66,7 +66,7 @@ const Contact = () => {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-6">
-            <div className="glass-card dark:glass-card-dark p-8 rounded-2xl shadow-xl">
+            <div className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-xl">
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
                 {t.contact.info}
               </h3>
@@ -165,12 +165,12 @@ const Contact = () => {
             </div>
 
             {/* Quick Links */}
-            <div className="glass-card dark:glass-card-dark p-8 rounded-2xl shadow-xl">
-              <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">{t.contact.availability}</h3>
-              <p className="mb-4 text-gray-700 dark:text-gray-300">
+            <div className="bg-gradient-to-br from-primary-500 to-navy-600 p-8 rounded-2xl shadow-xl text-white">
+              <h3 className="text-xl font-bold mb-4">{t.contact.availability}</h3>
+              <p className="mb-4">
                 {t.contact.availableText}
               </p>
-              <div className="flex items-center text-gray-900 dark:text-white">
+              <div className="flex items-center">
                 <div className="w-3 h-3 bg-green-400 rounded-full mr-2 animate-pulse"></div>
                 <span>{t.contact.availableStatus}</span>
               </div>
@@ -178,7 +178,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="glass-card dark:glass-card-dark p-8 rounded-2xl shadow-xl">
+          <div className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-xl">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
               {t.contact.form.title}
             </h3>
