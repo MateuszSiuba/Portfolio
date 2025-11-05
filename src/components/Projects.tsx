@@ -35,7 +35,7 @@ const Projects = () => {
   }));
 
   return (
-    <section id="projects" className="py-20 bg-white dark:bg-gray-900">
+    <section id="projects" className="py-20 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
@@ -50,7 +50,7 @@ const Projects = () => {
         <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-8">
           {projects.map((project, index) => (
             <Card3D key={index}>
-              <div className="bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-700 rounded-2xl shadow-xl overflow-hidden">
+              <div className="glass-card dark:glass-card-dark rounded-2xl shadow-xl overflow-hidden">
               <div className="md:flex">
                 {/* Project Icon/Image */}
                 <div className={`md:w-1/3 bg-gradient-to-br ${project.color} flex items-center justify-center p-12`}>

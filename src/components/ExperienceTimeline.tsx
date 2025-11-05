@@ -12,7 +12,7 @@ const ExperienceTimeline = () => {
         <div key={index} className={`mb-12 flex items-center w-full md:${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
           {/* Mobile: all cards on right side, Desktop: alternating */}
           <div className={`w-full pl-12 md:w-5/12 md:pl-0 ${index % 2 === 0 ? 'md:pr-8 md:text-right' : 'md:pl-8'}`}>
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-xl border-2 border-primary-200 dark:border-primary-700 hover:shadow-2xl transition-all">
+            <div className="glass-card dark:glass-card-dark p-6 rounded-xl shadow-xl hover:shadow-2xl transition-all">
               <div className="flex items-center justify-between mb-3">
                 <span className="text-sm font-semibold text-primary-600 dark:text-primary-400 px-3 py-1 bg-primary-100 dark:bg-primary-900 rounded-full">
                   {job.duration}

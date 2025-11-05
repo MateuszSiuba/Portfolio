@@ -5,7 +5,7 @@ const About = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="about" className="py-20 bg-white dark:bg-gray-900">
+    <section id="about" className="py-20 bg-gradient-to-br from-cyan-50 via-blue-50 to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
@@ -16,7 +16,7 @@ const About = () => {
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <div className="bg-gradient-to-br from-primary-50 to-navy-50 dark:from-gray-800 dark:to-gray-700 p-8 rounded-2xl shadow-lg">
+            <div className="glass-card dark:glass-card-dark p-8 rounded-2xl shadow-lg">
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                 {t.about.description1}
               </p>
@@ -51,7 +51,7 @@ const About = () => {
 
         {/* Quick Info Cards */}
         <div className="grid md:grid-cols-3 gap-6 mt-12">
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-xl border-2 border-primary-200 dark:border-primary-700 shadow-lg hover:shadow-xl hover:border-primary-400 dark:hover:border-primary-500 transition-all">
+          <div className="glass-card dark:glass-card-dark p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
             <div className="flex items-center mb-3">
               <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center mr-3">
                 <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -63,7 +63,7 @@ const About = () => {
             <p className="text-gray-600 dark:text-gray-300 font-medium">{t.about.cards.workDesc}</p>
           </div>
 
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-xl border-2 border-navy-200 dark:border-navy-700 shadow-lg hover:shadow-xl hover:border-navy-400 dark:hover:border-navy-500 transition-all">
+          <div className="glass-card dark:glass-card-dark p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
             <div className="flex items-center mb-3">
               <div className="w-10 h-10 bg-gradient-to-br from-navy-500 to-navy-600 rounded-lg flex items-center justify-center mr-3">
                 <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -75,7 +75,7 @@ const About = () => {
             <p className="text-gray-600 dark:text-gray-300 font-medium">{t.about.cards.educationDesc}</p>
           </div>
 
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-xl border-2 border-green-200 dark:border-green-700 shadow-lg hover:shadow-xl hover:border-green-400 dark:hover:border-green-500 transition-all">
+          <div className="glass-card dark:glass-card-dark p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
             <div className="flex items-center mb-3">
               <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center mr-3">
                 <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">

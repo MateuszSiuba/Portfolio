@@ -4,7 +4,7 @@ const Education = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="education" className="py-20 bg-white dark:bg-gray-900">
+    <section id="education" className="py-20 bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
@@ -15,7 +15,7 @@ const Education = () => {
 
         <div className="grid md:grid-cols-2 gap-8">
           {/* Education */}
-          <div className="bg-gradient-to-br from-primary-50 to-navy-50 dark:from-gray-800 dark:to-gray-700 p-8 rounded-2xl shadow-xl">
+          <div className="glass-card dark:glass-card-dark p-8 rounded-2xl shadow-xl">
             <div className="flex items-center mb-6">
               <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-navy-600 rounded-full flex items-center justify-center text-white text-2xl mr-4">
                 🎓
@@ -55,7 +55,7 @@ const Education = () => {
               </div>
             </div>
 
-            <div className="mt-6 p-4 bg-white dark:bg-gray-800 rounded-lg">
+            <div className="mt-6 p-4 glass dark:glass-dark rounded-lg">
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 {t.education.school.description}
               </p>
@@ -64,7 +64,7 @@ const Education = () => {
 
           {/* Certifications */}
           <div className="space-y-4">
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900 dark:to-blue-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:scale-105">
+            <div className="glass-card dark:glass-card-dark p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:scale-105">
               <div className="flex items-start">
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center text-white text-xl mr-4 flex-shrink-0">
                   🏆
@@ -90,7 +90,7 @@ const Education = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900 dark:to-purple-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:scale-105">
+            <div className="glass-card dark:glass-card-dark p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:scale-105">
               <div className="flex items-start">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center text-white text-xl mr-4 flex-shrink-0">
                   🤖
@@ -117,7 +117,7 @@ const Education = () => {
             </div>
 
             {/* Additional Learning */}
-            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-lg border-2 border-dashed border-gray-300 dark:border-gray-600">
+            <div className="glass dark:glass-dark p-6 rounded-xl shadow-lg border-2 border-dashed border-gray-300 dark:border-gray-600">
               <div className="flex items-center mb-3">
                 <svg className="w-6 h-6 text-primary-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -134,22 +134,22 @@ const Education = () => {
         </div>
 
         {/* Skills from Education */}
-        <div className="mt-12 bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-xl border-2 border-gray-200 dark:border-gray-700">
+        <div className="mt-12 glass-card dark:glass-card-dark p-8 rounded-2xl shadow-xl">
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
             {t.education.keyCompetencies.title}
           </h3>
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl border-2 border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-500 hover:shadow-lg transition-all">
+            <div className="glass dark:glass-dark p-6 rounded-xl hover:shadow-lg transition-all">
               <div className="text-4xl mb-3">🌐</div>
               <h4 className="text-gray-900 dark:text-white font-bold text-lg mb-2">{t.education.keyCompetencies.networking.title}</h4>
               <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{t.education.keyCompetencies.networking.description}</p>
             </div>
-            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl border-2 border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-500 hover:shadow-lg transition-all">
+            <div className="glass dark:glass-dark p-6 rounded-xl hover:shadow-lg transition-all">
               <div className="text-4xl mb-3">🤖</div>
               <h4 className="text-gray-900 dark:text-white font-bold text-lg mb-2">{t.education.keyCompetencies.ai.title}</h4>
               <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{t.education.keyCompetencies.ai.description}</p>
             </div>
-            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl border-2 border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-500 hover:shadow-lg transition-all">
+            <div className="glass dark:glass-dark p-6 rounded-xl hover:shadow-lg transition-all">
               <div className="text-4xl mb-3">💡</div>
               <h4 className="text-gray-900 dark:text-white font-bold text-lg mb-2">{t.education.keyCompetencies.product.title}</h4>
               <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{t.education.keyCompetencies.product.description}</p>

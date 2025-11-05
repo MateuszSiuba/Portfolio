@@ -52,7 +52,7 @@ const Skills = () => {
   const softSkills = t.skills.softSkillsList;
 
   return (
-    <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section id="skills" className="py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
@@ -69,7 +69,7 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-xl hover:shadow-2xl border-2 border-gray-100 dark:border-gray-700 hover:border-primary-300 dark:hover:border-primary-700 transition-all"
+              className="glass-card dark:glass-card-dark p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all"
             >
               <div className="flex items-center mb-6">
                 <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center text-3xl mr-4 shadow-lg`}>
@@ -84,7 +84,7 @@ const Skills = () => {
                 {category.skills.map((skill, idx) => (
                   <div 
                     key={idx}
-                    className="flex items-center p-4 bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-750 rounded-xl hover:from-primary-50 hover:to-blue-50 dark:hover:from-gray-700 dark:hover:to-gray-650 transition-all shadow-sm hover:shadow-md border border-gray-200 dark:border-gray-700"
+                    className="flex items-center p-4 glass dark:glass-dark rounded-xl hover:bg-white/20 dark:hover:bg-black/20 transition-all shadow-sm hover:shadow-md"
                   >
                     <span className="text-2xl mr-4">{skill.icon}</span>
                     <span className="text-gray-800 dark:text-gray-200 font-semibold">
@@ -98,7 +98,7 @@ const Skills = () => {
         </div>
 
         {/* Soft Skills */}
-        <div className="bg-white dark:bg-gray-900 p-10 rounded-2xl shadow-xl border-2 border-gray-200 dark:border-gray-700">
+        <div className="glass-card dark:glass-card-dark p-10 rounded-2xl shadow-xl">
           <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
             {t.skills.softSkillsTitle}
           </h3>
@@ -106,7 +106,7 @@ const Skills = () => {
             {softSkills.map((skill, index) => (
               <div
                 key={index}
-                className="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl text-center hover:shadow-lg transition-all transform hover:scale-105 border-2 border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-500"
+                className="glass dark:glass-dark p-5 rounded-xl text-center hover:shadow-lg transition-all transform hover:scale-105"
               >
                 <div className="text-4xl mb-2">{skill.icon}</div>
                 <p className="text-gray-900 dark:text-white font-semibold text-sm">{skill.name}</p>
@@ -116,7 +116,7 @@ const Skills = () => {
         </div>
 
         {/* Technologies Stack */}
-        <div className="mt-12 bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-xl border-2 border-gray-200 dark:border-gray-700">
+        <div className="mt-12 glass-card dark:glass-card-dark p-8 rounded-2xl shadow-xl">
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
             {t.skills.techStack}
           </h3>

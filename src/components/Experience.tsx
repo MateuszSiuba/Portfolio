@@ -13,7 +13,7 @@ const Experience = () => {
   }));
 
   return (
-    <section id="experience" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section id="experience" className="py-20 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
@@ -68,7 +68,7 @@ const Experience = () => {
               >
                 {/* Content */}
                 <div className="flex-1 w-full">
-                  <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow border-l-4 border-primary-500">
+                  <div className="glass-card dark:glass-card-dark p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow border-l-4 border-primary-500">
                     <div className="flex items-center mb-4">
                       <span className="text-4xl mr-4">{exp.icon}</span>
                       <div className="flex-1">
