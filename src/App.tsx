@@ -1,7 +1,7 @@
-import { useState, useEffect, lazy, Suspense } from 'react';
+import { lazy, Suspense } from 'react';
 import { Toaster } from 'react-hot-toast';
 import { LanguageProvider } from './contexts/LanguageContext';
-import { ThemeProvider } from './contexts/ThemeContext';
+import { ThemeProvider, useTheme } from './contexts/ThemeContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ScrollProgressBar from './components/ScrollProgressBar';
@@ -17,21 +17,12 @@ const Projects = lazy(() => import('./components/Projects'));
 const Contact = lazy(() => import('./components/Contact'));
 const Footer = lazy(() => import('./components/Footer'));
 
-function App() {
-  const [darkMode, setDarkMode] = useState(true);
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [darkMode]);
+function AppContent() {
+  const { isDark } = useTheme();
 
   return (
-    <ThemeProvider>
-      <LanguageProvider>
-        <div className="min-h-screen transition-colors duration-300" style={{ backgroundColor: 'var(--color-background)', color: 'var(--color-text)' }}>
+    <LanguageProvider>
+      <div className="min-h-screen transition-colors duration-300" style={{ backgroundColor: 'var(--color-background)', color: 'var(--color-text)' }}>
         <a href="#main-content" className="skip-to-main">
           Skip to main content
         </a>
@@ -52,9 +43,9 @@ function App() {
           }}
         />
         <ScrollProgressBar />
-        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+        <Navbar />
         <main id="main-content">
-        <Hero darkMode={darkMode} />
+          <Hero darkMode={isDark} />
         
         <Suspense fallback={
           <div className="flex items-center justify-center min-h-screen">
@@ -75,6 +66,13 @@ function App() {
         <BackToTop />
       </div>
     </LanguageProvider>
+  );
+}
+
+function App() {
+  return (
+    <ThemeProvider>
+      <AppContent />
     </ThemeProvider>
   );
 }

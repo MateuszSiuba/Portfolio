@@ -303,6 +303,16 @@ html.pure .border-primary-500 {
   border-color: #9ca3af !important;
 }
 
+/* Fix hamburger menu hover in Pure */
+html.pure .hover\:from-primary-500:hover,
+html.pure .hover\:to-primary-600:hover {
+  background: #f3f4f6 !important;
+}
+
+html.pure .hover\:border-primary-500:hover {
+  border-color: #9ca3af !important;
+}
+
 /* SVG icons colors in Pure */
 html.pure svg {
   color: #6b7280 !important;

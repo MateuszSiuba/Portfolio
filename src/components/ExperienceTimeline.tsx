@@ -5,12 +5,13 @@ const ExperienceTimeline = () => {
 
   return (
     <div className="relative">
-      {/* Timeline Line */}
-      <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary-500 via-navy-500 to-primary-500"></div>
+      {/* Timeline Line - centered on desktop, left on mobile */}
+      <div className="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary-500 via-navy-500 to-primary-500"></div>
 
       {t.experience.jobs.map((job, index) => (
-        <div key={index} className={`mb-12 flex ${index % 2 === 0 ? 'justify-start' : 'justify-end'} items-center w-full`}>
-          <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8'}`}>
+        <div key={index} className={`mb-12 flex items-center w-full md:${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
+          {/* Mobile: all cards on right side, Desktop: alternating */}
+          <div className={`w-full pl-12 md:w-5/12 md:pl-0 ${index % 2 === 0 ? 'md:pr-8 md:text-right' : 'md:pl-8'}`}>
             <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-xl border-2 border-primary-200 dark:border-primary-700 hover:shadow-2xl transition-all">
               <div className="flex items-center justify-between mb-3">
                 <span className="text-sm font-semibold text-primary-600 dark:text-primary-400 px-3 py-1 bg-primary-100 dark:bg-primary-900 rounded-full">
@@ -37,8 +38,8 @@ const ExperienceTimeline = () => {
             </div>
           </div>
 
-          {/* Timeline Dot */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-to-br from-primary-500 to-navy-600 border-4 border-white dark:border-gray-900 rounded-full z-10 shadow-lg"></div>
+          {/* Timeline Dot - left on mobile, center on desktop */}
+          <div className="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-to-br from-primary-500 to-navy-600 border-4 border-white dark:border-gray-900 rounded-full z-10 shadow-lg"></div>
         </div>
       ))}
     </div>
