@@ -1,9 +1,10 @@
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '../contexts/useLanguage';
 
 const Contact = () => {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -14,11 +15,9 @@ const Contact = () => {
   const copyEmailToClipboard = async () => {
     try {
       await navigator.clipboard.writeText('mateusz.siuba00@gmail.com');
-      toast.success(language === 'pl' ? '📧 Email skopiowany!' : '📧 Email copied!', {
-        duration: 2000,
-      });
-    } catch (err) {
-      toast.error(language === 'pl' ? 'Nie udało się skopiować' : 'Failed to copy');
+      toast.success(t.contact.form.copiedEmail, { duration: 2000 });
+    } catch {
+      toast.error(t.contact.form.failedCopy);
     }
   };
 
@@ -29,29 +28,35 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // TODO: Add reCAPTCHA v3 verification here
-    // Get site key from: https://www.google.com/recaptcha/admin
-    // Add script to index.html: <script src="https://www.google.com/recaptcha/api.js?render=YOUR_SITE_KEY"></script>
-    // Verify token on backend before sending email
-    
+
     const loadingToast = toast.loading(t.contact.form.sending);
-    
-    // Simulate form submission
-    setTimeout(() => {
+
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          reply_to: formData.email,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
       toast.dismiss(loadingToast);
-      toast.success(t.contact.form.success, {
-        duration: 4000,
-        icon: '✅',
-      });
+      toast.success(t.contact.form.success, { duration: 4000 });
       setFormData({ name: '', email: '', subject: '', message: '' });
-    }, 1500);
+    } catch {
+      toast.dismiss(loadingToast);
+      toast.error(t.contact.form.error, { duration: 4000 });
+    }
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-rose-50 via-pink-50 to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 animate-gradient">
+    <section id="contact" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">

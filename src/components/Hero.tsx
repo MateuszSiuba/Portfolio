@@ -1,4 +1,5 @@
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '../contexts/useLanguage';
+import { useTheme } from '../contexts/ThemeContext';
 import { TypeAnimation } from 'react-type-animation';
 import ParticlesBackground from './ParticlesBackground';
 
@@ -8,10 +9,11 @@ interface HeroProps {
 
 const Hero = ({ darkMode }: HeroProps) => {
   const { t, language } = useLanguage();
+  const { theme } = useTheme();
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-gray-50 to-primary-50 dark:from-gray-900 dark:via-gray-800 dark:to-navy-900 pt-16 relative overflow-hidden">
-      <ParticlesBackground darkMode={darkMode} />
+    <section id="home" className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
+      {theme !== 'pure' && <ParticlesBackground darkMode={darkMode} />}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <div className="text-center animate-fade-in">
           {/* Avatar/Profile Picture Placeholder */}
@@ -102,9 +104,19 @@ const Hero = ({ darkMode }: HeroProps) => {
             </a>
             <a
               href="#contact"
-              className="px-8 py-3 border-2 border-primary-500 text-primary-600 dark:text-primary-400 rounded-lg font-semibold hover:bg-primary-500 hover:text-white transform hover:scale-105 transition-all duration-300"
+              className="px-8 py-3 border-2 border-primary-500 text-primary-600 dark:text-primary-400 rounded-lg font-semibold hover:bg-primary-500 hover:border-primary-500 hover:text-white dark:hover:text-white transform hover:scale-105 transition-all duration-300"
             >
               {t.hero.contactMe}
+            </a>
+            <a
+              href="/Portfolio/cv/Mateusz_Siuba_CV.pdf"
+              download
+              className="px-8 py-3 border-2 border-gray-400 text-gray-600 dark:text-gray-300 dark:border-gray-500 rounded-lg font-semibold hover:bg-gray-100 dark:hover:bg-gray-800 transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
+            >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              {t.hero.downloadCV}
             </a>
           </div>
 

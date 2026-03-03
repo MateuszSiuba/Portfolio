@@ -22,7 +22,7 @@ function AppContent() {
 
   return (
     <LanguageProvider>
-      <div className="min-h-screen transition-colors duration-300" style={{ backgroundColor: 'var(--color-background)', color: 'var(--color-text)' }}>
+      <div className="page-bg min-h-screen transition-colors duration-500 text-gray-900 dark:text-gray-100">
         <a href="#main-content" className="skip-to-main">
           Skip to main content
         </a>

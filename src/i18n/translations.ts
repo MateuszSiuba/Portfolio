@@ -22,11 +22,13 @@ export const translations = {
       description1: 'Jestem dynamicznie rozwijającym się specjalistą IT z praktycznym doświadczeniem w administrowaniu bazami danych, wsparciu technicznym oraz tworzeniu innowacyjnych rozwiązań opartych na sztucznej inteligencji.',
       description2: 'Jako student informatyki jestem zdeterminowany do ciągłego rozwoju w obszarze nowoczesnych technologii. Moja droga zawodowa pokazuje szybką progresję - od specjalisty wsparcia technicznego, przez CBL/T2, aż do roli Specjalisty Produktu w ciągu zaledwie kilku miesięcy.',
       description3: 'Szczególnie interesuję mnie projekty związane z AI, automatyzacją procesów oraz tworzeniem nowoczesnych aplikacji webowych. Pracuję w środowisku międzynarodowym (UKI&I), co pozwala mi rozwijać kompetencje językowe i techniczne na co dzień.',
+      githubActivity: 'Aktywność GitHub',
+      viewFullProfile: 'Zobacz pełny profil',
       stats: {
         experience: 'Rok doświadczenia',
         certificates: 'Certyfikaty',
         projects: 'Projektów',
-        promotions: 'Awanse w rok',
+        promotions: 'Awanse w TPV',
       },
       cards: {
         work: 'Praca',
@@ -39,13 +41,15 @@ export const translations = {
     },
     experience: {
       title: 'Doświadczenie zawodowe',
-      subtitle: 'Szybka progresja kariery - 3 awanse w ciągu roku',
+      subtitle: 'Szybka progresja kariery w TPV — 3 awanse w 16 miesięcy',
+      viewCards: 'Karty',
+      viewTimeline: 'Oś czasu',
       jobs: [
         {
           title: "Specjalista Produktu TPV",
           company: "TPV",
           period: "Wrzesień 2025 - Obecnie",
-          duration: "~2 miesiące",
+          duration: "~6 miesięcy",
           description: [
             "Zarządzanie produktem i analiza wymagań biznesowych",
             "Współpraca z zespołami międzynarodowymi (UKI&I)",
@@ -231,6 +235,9 @@ export const translations = {
         send: 'Wyślij wiadomość',
         sending: 'Wysyłanie...',
         success: '✅ Wiadomość została wysłana pomyślnie!',
+        error: 'Nie udało się wysłać wiadomości. Spróbuj ponownie.',
+        copiedEmail: '📧 Email skopiowany!',
+        failedCopy: 'Nie udało się skopiować',
       }
     },
     footer: {
@@ -266,13 +273,15 @@ export const translations = {
     about: {
       title: 'About Me',
       description1: 'I am a dynamically developing IT specialist with practical experience in database administration, technical support, and creating innovative AI-based solutions.',
-      description2: 'As a computer science student, I am determined to continuously develop in the field of modern technologies. My career path shows rapid progression - from technical support specialist, through CBL/T2, to Product Specialist role in just a few months.',
-      description3: 'I am particularly interested in AI projects, process automation, and creating modern web applications. I work in an international environment (UKI&I), which allows me to develop language and technical competencies daily.',
+      description2: 'As a computer science student, I am determined to continuously develop in the field of modern technologies. My career path shows rapid progression — from technical support specialist, through CBL/T2, to Product Specialist in just over a year.',
+      description3: 'I am particularly interested in AI projects, process automation, and creating modern web applications. I work in an international environment (UKI&I — UK, Ireland & International), which allows me to develop language and technical competencies daily.',
+      githubActivity: 'GitHub Activity',
+      viewFullProfile: 'View full profile',
       stats: {
         experience: 'Year of Experience',
         certificates: 'Certificates',
         projects: 'Projects',
-        promotions: 'Promotions in a Year',
+        promotions: 'Career Promotions',
       },
       cards: {
         work: 'Work',
@@ -285,13 +294,15 @@ export const translations = {
     },
     experience: {
       title: 'Work Experience',
-      subtitle: 'Rapid career progression - 3 promotions in one year',
+      subtitle: 'Rapid career progression at TPV — 3 promotions in 16 months',
+      viewCards: 'Cards',
+      viewTimeline: 'Timeline',
       jobs: [
         {
           title: "TPV Product Specialist",
           company: "TPV",
           period: "September 2025 - Present",
-          duration: "~2 months",
+          duration: "~6 months",
           description: [
             "Product management and business requirements analysis",
             "Collaboration with international teams (UKI&I)",
@@ -342,21 +353,21 @@ export const translations = {
     education: {
       title: 'Education & Certificates',
       school: {
-        name: 'Akademia Jakości Polskiej',
+        name: 'Akademia Jakuba z Paradyża',
         location: 'Gorzów Wielkopolski',
         field: 'Field:',
         fieldValue: 'Computer Science',
         status: 'Status:',
         statusValue: 'Student',
         focus: 'Focus:',
-        focusValue: 'Programming, Databases, AI',
+        focusValue: 'Programming, Databases, AI, Computer Networks',
         description: 'Actively combining theory with practice, using academic knowledge in real commercial projects.'
       },
       certifications: {
         ccna: {
           title: 'CCNA 1 & CCNA 2',
           subtitle: 'Cisco Certified Network Associate',
-          organization: '📚 Akademia Jakości Polskiej in Gorzów Wielkopolski',
+          organization: '📚 Akademia Jakuba z Paradyża in Gorzów Wielkopolski',
           tags: ['Networking', 'Routing & Switching']
         },
         productAI: {
@@ -477,6 +488,9 @@ export const translations = {
         send: 'Send Message',
         sending: 'Sending...',
         success: '✅ Message sent successfully!',
+        error: 'Failed to send message. Please try again.',
+        copiedEmail: '📧 Email copied!',
+        failedCopy: 'Failed to copy',
       }
     },
     footer: {

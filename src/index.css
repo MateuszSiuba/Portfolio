@@ -474,6 +474,77 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Global focus rings — visible only for keyboard nav, not mouse clicks */
+:focus-visible {
+  outline: 2px solid var(--color-primary, #10b981);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Remove default outline only when :focus-visible is supported */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Full-page seamless gradient — per theme */
+
+/* Light: soft pastel rainbow */
+.page-bg {
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #ecfdf5 8%,
+    #e0f2fe 18%,
+    #ede9fe 30%,
+    #f0fdf4 42%,
+    #eff6ff 54%,
+    #eef2ff 66%,
+    #fdf4ff 78%,
+    #fff1f2 90%,
+    #f8fafc 100%
+  );
+}
+
+/* Dark: deep navy-to-slate */
+.dark .page-bg {
+  background: linear-gradient(
+    to bottom,
+    #0f172a 0%,
+    #111827 15%,
+    #111827 85%,
+    #0f172a 100%
+  );
+}
+
+/* Matrix: deep black-green */
+html.matrix .page-bg {
+  background: linear-gradient(
+    to bottom,
+    #0d0208 0%,
+    #080f08 20%,
+    #0a120a 50%,
+    #080f08 80%,
+    #0d0208 100%
+  );
+}
+
+/* Ocean: deep blue gradient */
+html.ocean .page-bg {
+  background: linear-gradient(
+    to bottom,
+    #071e2e 0%,
+    #082f45 20%,
+    #0c4a6e 50%,
+    #082f45 80%,
+    #071e2e 100%
+  );
+}
+
+/* Pure: clean white */
+html.pure .page-bg {
+  background: #ffffff;
+}
+
 @layer utilities {
   .text-gradient {
     @apply bg-gradient-to-r from-primary-500 via-navy-500 to-primary-600 bg-clip-text text-transparent;

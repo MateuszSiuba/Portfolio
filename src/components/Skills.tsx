@@ -1,4 +1,4 @@
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '../contexts/useLanguage';
 
 const Skills = () => {
   const { t } = useLanguage();
@@ -9,7 +9,7 @@ const Skills = () => {
       color: "from-green-500 to-green-600",
       skills: [
         { name: "Python", icon: "🐍" },
-        { name: "Django", icon: "🎸" },
+        { name: "Django", icon: "🐍" },
         { name: "REST API", icon: "🔌" },
         { name: "Databases", icon: "🗄️" }
       ]
@@ -52,7 +52,7 @@ const Skills = () => {
   const softSkills = t.skills.softSkillsList;
 
   return (
-    <section id="skills" className="py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 animate-gradient">
+    <section id="skills" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
@@ -115,62 +115,6 @@ const Skills = () => {
           </div>
         </div>
 
-        {/* Technologies Stack */}
-        <div className="mt-12 bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-xl">
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
-            {t.skills.techStack}
-          </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="group">
-              <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-6 rounded-xl text-center hover:scale-105 transition-transform shadow-lg">
-                <div className="text-5xl mb-3">🐍</div>
-                <p className="text-white font-semibold text-lg">Python</p>
-              </div>
-            </div>
-            <div className="group">
-              <div className="bg-gradient-to-br from-green-600 to-green-700 p-6 rounded-xl text-center hover:scale-105 transition-transform shadow-lg">
-                <div className="text-5xl mb-3">🎸</div>
-                <p className="text-white font-semibold text-lg">Django</p>
-              </div>
-            </div>
-            <div className="group">
-              <div className="bg-gradient-to-br from-cyan-500 to-blue-600 p-6 rounded-xl text-center hover:scale-105 transition-transform shadow-lg">
-                <div className="text-5xl mb-3">⚛️</div>
-                <p className="text-white font-semibold text-lg">React</p>
-              </div>
-            </div>
-            <div className="group">
-              <div className="bg-gradient-to-br from-orange-500 to-red-600 p-6 rounded-xl text-center hover:scale-105 transition-transform shadow-lg">
-                <div className="text-5xl mb-3">📄</div>
-                <p className="text-white font-semibold text-lg">HTML/CSS</p>
-              </div>
-            </div>
-            <div className="group">
-              <div className="bg-gradient-to-br from-yellow-400 to-yellow-600 p-6 rounded-xl text-center hover:scale-105 transition-transform shadow-lg">
-                <div className="text-5xl mb-3">⚡</div>
-                <p className="text-white font-semibold text-lg">JavaScript</p>
-              </div>
-            </div>
-            <div className="group">
-              <div className="bg-gradient-to-br from-gray-700 to-gray-900 p-6 rounded-xl text-center hover:scale-105 transition-transform shadow-lg">
-                <div className="text-5xl mb-3">🗄️</div>
-                <p className="text-white font-semibold text-lg">Database</p>
-              </div>
-            </div>
-            <div className="group">
-              <div className="bg-gradient-to-br from-orange-600 to-red-700 p-6 rounded-xl text-center hover:scale-105 transition-transform shadow-lg">
-                <div className="text-5xl mb-3">🔀</div>
-                <p className="text-white font-semibold text-lg">Git</p>
-              </div>
-            </div>
-            <div className="group">
-              <div className="bg-gradient-to-br from-purple-500 to-purple-700 p-6 rounded-xl text-center hover:scale-105 transition-transform shadow-lg">
-                <div className="text-5xl mb-3">🤖</div>
-                <p className="text-white font-semibold text-lg">AI</p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

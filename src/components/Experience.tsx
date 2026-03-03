@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '../contexts/useLanguage';
 import ExperienceTimeline from './ExperienceTimeline';
 
 const Experience = () => {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
   const [viewMode, setViewMode] = useState<'cards' | 'timeline'>('cards');
   
   const experiences = t.experience.jobs.map((job, index) => ({
@@ -13,16 +13,13 @@ const Experience = () => {
   }));
 
   return (
-    <section id="experience" className="py-20 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 animate-gradient">
+    <section id="experience" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             {t.experience.title}
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-navy-600 mx-auto mb-4"></div>
-          <p className="text-xl text-gray-600 dark:text-gray-400 mb-6">
-            {t.experience.subtitle}
-          </p>
           
           {/* View Mode Toggle */}
           <div className="flex justify-center gap-4">
@@ -34,7 +31,7 @@ const Experience = () => {
                   : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
               }`}
             >
-              📋 {language === 'pl' ? 'Karty' : 'Cards'}
+              📋 {t.experience.viewCards}
             </button>
             <button
               onClick={() => setViewMode('timeline')}
@@ -44,7 +41,7 @@ const Experience = () => {
                   : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
               }`}
             >
-              📅 {language === 'pl' ? 'Oś czasu' : 'Timeline'}
+              📅 {t.experience.viewTimeline}
             </button>
           </div>
         </div>
