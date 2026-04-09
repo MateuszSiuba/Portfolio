@@ -41,13 +41,13 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-center space-x-2">
+          <div className="hidden xl:block">
+            <div className="ml-6 flex items-center space-x-2">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 px-3 py-2 rounded-md text-sm font-medium transition-colors whitespace-nowrap"
                 >
                   {item.name}
                 </a>
@@ -105,7 +105,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center space-x-2">
+          <div className="xl:hidden flex items-center space-x-2">
             {/* Language Toggle Mobile */}
             <button
               onClick={() => setLanguage(language === 'pl' ? 'en' : 'pl')}
@@ -147,7 +147,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden">
+        <div className="xl:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white dark:bg-gray-900 shadow-lg">
             {navItems.map((item) => (
               <a
@@ -159,6 +159,19 @@ const Navbar = () => {
                 {item.name}
               </a>
             ))}
+
+            <button
+              onClick={() => {
+                downloadCV();
+                setIsOpen(false);
+              }}
+              disabled={isDownloading}
+              className={`w-full text-left text-white bg-gradient-to-r from-primary-500 to-navy-600 block px-4 py-3 rounded-lg text-base font-semibold transition-all shadow-sm hover:shadow-md border-2 border-primary-600 hover:border-primary-500 ${
+                isDownloading ? 'opacity-75 cursor-wait' : ''
+              }`}
+            >
+              {isDownloading ? '...' : t.hero.downloadCV}
+            </button>
           </div>
         </div>
       )}

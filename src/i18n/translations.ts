@@ -199,6 +199,28 @@ export const translations = {
           ]
         },
         {
+          title: "Quiz Game",
+          description: "Gra quizowa online z pytaniami wielokrotnego wyboru, systemem punktacji i czytelnym podsumowaniem wyniku.",
+          features: [
+            "Pytania wielokrotnego wyboru z natychmiastową walidacją odpowiedzi",
+            "System punktacji aktualizowany w czasie rzeczywistym",
+            "Ekran końcowy z podsumowaniem wyniku",
+            "Responsywny interfejs na desktop i urządzenia mobilne",
+            "Wdrożenie online na Render"
+          ]
+        },
+        {
+          title: "Allocation Tool",
+          description: "Projekt zawodowy do proponowania modelu alternatywnego na podstawie modelu klienta MNT. Algorytm przeszukuje pliki i wskazuje odpowiednie zamienniki.",
+          features: [
+            "Analiza modelu klienta MNT i mapowanie do modeli alternatywnych",
+            "Automatyczne przeszukiwanie plików z listami modeli",
+            "Wyszukiwanie dopasowań na podstawie reguł biznesowych",
+            "Szybszy dobór zamienników dla zespołu wsparcia",
+            "Możliwość rozszerzania logiki o kolejne reguły"
+          ]
+        },
+        {
           title: "AI Voicebot Project",
           description: "Projekt voicebota wykorzystującego sztuczną inteligencję do automatyzacji procesów wsparcia technicznego w środowisku produkcyjnym.",
           features: [
@@ -449,6 +471,28 @@ export const translations = {
             "Ability to add new excuses",
             "User voting system (upvote/downvote)",
             "Backend with REST API"
+          ]
+        },
+        {
+          title: "Quiz Game",
+          description: "Online quiz game with multiple-choice questions, live scoring, and a clear final results summary.",
+          features: [
+            "Multiple-choice questions with instant answer validation",
+            "Real-time score updates during gameplay",
+            "Final screen with score summary",
+            "Responsive interface for desktop and mobile",
+            "Online deployment on Render"
+          ]
+        },
+        {
+          title: "Allocation Tool",
+          description: "Work project for proposing an alternative model based on a client MNT model. The algorithm scans files and finds matching replacements.",
+          features: [
+            "Client MNT model analysis and mapping to alternative models",
+            "Automatic scanning of files containing model data",
+            "Rule-based matching for replacement suggestions",
+            "Faster substitute selection for support teams",
+            "Extensible logic for adding new matching rules"
           ]
         },
         {
